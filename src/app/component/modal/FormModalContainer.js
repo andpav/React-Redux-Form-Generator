@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as Actions from '../../action/actions';
-import Forms from './Forms';
+import GoToStoreModal from './FormModal';
 
 const mapStateToProps = (state) => ({
 	modal: state.modal,
@@ -12,4 +12,4 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(Actions, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Forms);
+export default connect(mapStateToProps, mapDispatchToProps)(GoToStoreModal);

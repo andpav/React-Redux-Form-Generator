@@ -1,0 +1,42 @@
+.form {
+}
+
+.form-section {
+	margin: 4px 0;
+	width: 350px;
+	display: flex;
+	justify-content: center;
+}
+
+.form-header {
+	color: #242424;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.form__delete-button {
+	margin-right: 25px;
+	color: #909599;
+	font-family: Roboto;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.form__delete-button:hover {
+	opacity: 0.8;
+}
+
+.form__edit-button {
+	color: #909599;
+	font-family: Roboto;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.form__edit-button:hover {
+	opacity: 0.8;
+}

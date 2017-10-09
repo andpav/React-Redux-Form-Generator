@@ -8,15 +8,19 @@ import './styles.css';
 export default class Welcome extends React.PureComponent {
 	render() {
 		return (
-			<div className="welcome">
+			<section className="welcome">
 				<button
 					className="welcome__button"
-					onClick={() => this.props.showModal('isShowingNewFormModal')}>
-					<span>NEW</span>
+					onClick={() => this.props.showModal({ isShowing: true, id: false })}>
+					<span className="text_to-uppercase">new</span>
 				</button>
 				<ModalRoot/>
 				<Forms/>
-			</div>
+			</section>
 		);
 	}
 }
+
+Welcome.propTypes = {
+	showModal: React.PropTypes.func,
+};

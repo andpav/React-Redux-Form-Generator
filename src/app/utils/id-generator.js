@@ -1,5 +1,5 @@
-let formId = 0;
-let fieldId = 0;
+let formId = 1;
+let fieldId = 1;
 
 export default {
 	getNewFormId: () => {

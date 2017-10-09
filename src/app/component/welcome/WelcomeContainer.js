@@ -1,24 +1,14 @@
 'use strict';
 
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as Actions from '../../action/actions';
 import Welcome from './Welcome';
 
-const mapStateToProps = (state) => {
-  return {
-    modal: state.modal,
-  };
-};
+const mapStateToProps = (state) => ({
+	modal: state.modal,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    showModal: (id) => {
-      dispatch(Actions.showModal(id));
-	  },
-  	hideModal: () => {
-      dispatch(Actions.hideModal());
-  	},
-  };
-};
+const mapDispatchToProps = dispatch => bindActionCreators(Actions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Welcome);

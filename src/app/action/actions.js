@@ -2,43 +2,32 @@
 
 import * as ActionTypes from './action-types';
 
-export const showModal = (id) => {
-  return {
-    type: ActionTypes.SHOW_MODAL,
-    payload: id,
-  };
-};
+export const showModal = data => ({
+	type: ActionTypes.SHOW_MODAL,
+	payload: data,
+});
 
-export const hideModal = () => {
-  return {
-    type: ActionTypes.HIDE_MODAL,
-  };
-};
+export const hideModal = () => ({
+	type: ActionTypes.HIDE_MODAL,
+});
 
-export const addField = (data) => {
-	return {
-		type: ActionTypes.ADD_FIELD,
-		payload: data,
-	};
-};
 
-export const deleteField = (id) => {
-	return {
-		type: ActionTypes.DELETE_FIELD,
-		payload: id,
-	};
-};
+export const addForm = data => ({
+	type: ActionTypes.ADD_FORM,
+	payload: data,
+});
 
-export const addForm = (data) => {
-	return {
-		type: ActionTypes.ADD_FORM,
-		payload: data,
-	};
-};
+export const editForm = id => ({
+	type: ActionTypes.EDIT_FORM,
+	payload: id,
+});
 
-export const deleteForm = (id) => {
-	return {
+export const deleteForm = id => ({
 		type: ActionTypes.DELETE_FORM,
 		payload: id,
-	};
-};
+});
+
+export const receiveForms = data => ({
+	type: ActionTypes.RECEIVE_FORMS,
+	payload: data,
+});

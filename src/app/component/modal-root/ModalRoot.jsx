@@ -1,18 +1,22 @@
 import React from 'react';
-import GoToStoreModal from '../go-to-store-modal/GoToStoreModalContainer';
+import GoToStoreModal from '../modal/FormModalContainer';
 import './styles.css';
 
 export default class ModalRoot extends React.PureComponent {
-  render() {
-  	const {isShowingNewFormModal} = this.props.modal;
-    return (
-      (isShowingNewFormModal) && <div>
-        <div className="modal">
-          <div className="modal__content">
-            {isShowingNewFormModal && <GoToStoreModal/>}
-          </div>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		const { isShowing } = this.props.modal;
+		return (
+			isShowing && <section>
+				<section className="modal">
+					<section className="modal__content">
+						{isShowing && <GoToStoreModal/>}
+					</section>
+				</section>
+			</section>
+		);
+	}
 }
+
+ModalRoot.propTypes = {
+	modal: React.PropTypes.object,
+};

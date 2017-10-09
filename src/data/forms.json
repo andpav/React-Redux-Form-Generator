@@ -1,0 +1,29 @@
+{
+  "uniqueid1":{
+    "id":"uniqueid1",
+    "name":"my form 1",
+    "fields":{
+      "uniqueid11": {
+        "id": "uniqueid11",
+        "name": "field 1",
+        "type": "input"
+      }
+    }
+  },
+  "uniqueid2": {
+    "id": "uniqueid2",
+    "name": "my form 2",
+    "fields": {
+      "uniqueid21": {
+        "id": "uniqueid21",
+        "name": "field 1",
+        "type": "input"
+      },
+      "uniqueid22": {
+        "id": "uniqueid22",
+        "name": "field 2",
+        "type": "textarea"
+      }
+    }
+  }
+}
